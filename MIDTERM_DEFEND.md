@@ -2,7 +2,7 @@ _# Midterm Defense Exam
 
 **Student Name:** [Gerson Ian Q. Tero]
 
-**Section:** [BSIT 3]
+**Section:** [BSIT 3yr]
 
 **Date:** [2026-03-06]
 
