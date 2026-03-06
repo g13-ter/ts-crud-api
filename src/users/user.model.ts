@@ -9,6 +9,7 @@ export interface UserAttributes {
   firstName: string;
   lastName: string;
   role: string;
+  websiteUrl: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -26,6 +27,7 @@ export class User
   public firstName!: string;
   public lastName!: string;
   public role!: string;
+  public websiteUrl!: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -56,6 +58,10 @@ export default function (sequelize: Sequelize): typeof User {
         allowNull: false
       },
       lastName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+       websiteUrl: {
         type: DataTypes.STRING,
         allowNull: false
       },
