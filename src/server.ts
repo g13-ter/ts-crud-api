@@ -2,7 +2,10 @@ import express, { Application } from 'express';
 import core from 'cors';
 import { errorHandler } from './_middleware/errorHandler';
 import { initialize } from './_helpers/db';
-import usersController from './users/users.controller';
+import departmentsController from './departments/departments.controller';
+import employeesController from './employees/employees.controller';
+import requestsController from './requests/requests.controller';
+import accountsController from './accounts/accounts.controller';
 
 const app: Application = express();
 
@@ -12,7 +15,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(core());
 
 // API Routes
-app.use('/users', usersController);
+app.use('/departments', departmentsController);
+app.use('/employees', employeesController);
+app.use('/requests', requestsController);
+app.use('/accounts', accountsController);
 
 // Global Error Handler (must be last)
 app.use(errorHandler);
